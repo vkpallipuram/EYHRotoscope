@@ -7,8 +7,8 @@ disp(strcat('This video contains ',num2str(numFrames), ' frames'));
 inputVideo.currentTime = 0;
 backgroundFrame = readFrame(inputVideo);
 backgroundFrame1=imresize(backgroundFrame,0.1);
-//disp('The input Video is');
-//disp(strcat(num2str(inputVideoLength),'seconds'));
+disp('The input Video is');
+disp(strcat(num2str(inputVideoLength),'seconds'));
 
 disp('Press ');
 result = input('(1) for Video or\n(2) for a Frame of the input video.\n');
@@ -42,5 +42,4 @@ if (result == 2)
     imwrite(outputImage, strcat(FilePath(1:end-7), 'output/',...
         'roto', FileName(1:end-4),'.png'), 'PNG');
 end
-
 close all
