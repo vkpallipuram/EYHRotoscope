@@ -6,7 +6,7 @@ disp(strcat('This video contains ',num2str(numFrames), ' frames'));
 %Get Background
 inputVideo.currentTime = 0;
 backgroundFrame = readFrame(inputVideo);
-backgroundFrame1=imresize(backgroundFrame,0.2);
+backgroundFrame1=imresize(backgroundFrame,[144 256]);
 disp('The input Video is');
 disp(strcat(num2str(inputVideoLength),'seconds'));
 
@@ -26,7 +26,7 @@ if(result == 1)
     for time = 1:numberOfFrames
         disp(time);
         inputFrame = readFrame(inputVideo);
-        inputFrame1=imresize(inputFrame,0.2);
+        inputFrame1=imresize(inputFrame,[144 256]);
         outputImage = rotoscope(numberOfFeatures, backgroundFrame1, inputFrame1);
         writeVideo(outputVideo, outputImage);
     end
