@@ -34,6 +34,7 @@ if(result == 1)
 end
 
 if (result == 2)
+    disp(strcat('This video has this many frames:%d',num2str(numFrames)));
     time = input('At what time is the frame that you would like to process? (seconds)\n');
     inputVideo.CurrentTime = time;
     inputFrame = readFrame(inputVideo);
