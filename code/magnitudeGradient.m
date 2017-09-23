@@ -36,7 +36,6 @@ vertical = convImg(vertical,Gd');
 for ii = 1:size(img,1)
     for jj = 1:size(img,2)
         %CODE NEEDS A MATH FIX HERE!
-        Gxy(ii,jj) = sqrt(horizontal(ii,jj)^2 + vertical(ii,jj)^2);
-        lang(ii,jj) = atan2(horizontal(ii,jj),vertical(ii,jj));
+        
     end
 end
